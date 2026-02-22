@@ -1,36 +1,28 @@
-# SOC-Home-Lab
-A functional SOC Home Lab featuring an ELK/Wazuh SIEM integration, automated telemetry collection, and simulated attack-defense scenarios to demonstrate threat detection and incident response.
+# Enterprise SOC Home Lab (6-Month Portfolio)
 
-# SOC Home Lab: Threat Detection & SIEM Integration
+## Goal
+Build a recruiter-ready cybersecurity portfolio demonstrating entry-level SOC analyst readiness using one evolving enterprise lab.
 
-## Objective
-The goal of this project was to build a functional Security Operations Center (SOC) environment to observe real-time telemetry, analyze security events, and strengthen my understanding of the **Incident Response** lifecycle.
+## Lab Environment
+- Windows Server 2022 (Domain Controller)
+- Windows 10 (Domain-joined client)
+- Kali Linux (attacker / test host)
+- Wazuh (SIEM)
 
-## Tools & Technologies Used
-- **SIEM:** Wazuh / Splunk / ELK Stack (Pick one)
-- **Virtualization:** Oracle VirtualBox / VMware
-- **Endpoint:** Windows 10 (Target) & Ubuntu Server (Manager)
-- **Attack Tool:** Kali Linux (Nmap, Metasploit)
-- **Network:** Internal Virtual Network (Host-only)
+## Repository Structure
+- **00-Lab-Setup**: Base environment build, network plan, diagrams, and build notes
+- **01-AD-Hardening**: Password policy, lockout policy, audit policy, least privilege
+- **02-SIEM-Deployment**: Wazuh setup + Windows log ingestion (4624/4625/4720/4728)
+- **03-Attack-Simulation-IR**: Password spraying/bruteforce/priv escalation + incident report
+- **04-Vulnerability-Management**: Scanning + prioritization + remediation roadmap
+- **05-Detection-Engineering**: Custom rules + tuning + false positive reduction
+- **06-Cloud-Extension**: Light Azure add-on (optional)
 
-## Lab Architecture
-1. **The Manager:** [Wazuh Manager] - Centralized log collection and analysis.
-2. **The Agent:** [Windows 10] - Configured with Sysmon for deep event logging.
-3. **The Attacker:** [Kali Linux] - Used to simulate brute-force and port scanning.
-
-## Key Activities & Screenshots
-### 1. Endpoint Monitoring
-*Configured Sysmon to track process creation and network connections.*
-[INSERT SCREENSHOT OF SYSMON LOGS HERE]
-
-### 2. Threat Detection
-*Simulated a Brute Force attack from Kali. Below is the SIEM dashboard showing the triggered 'Multiple Failed Login' alerts.*
-[INSERT SCREENSHOT OF SIEM ALERT HERE]
-
-### 3. Incident Analysis
-*Identified the Source IP of the attacker and documented the 'Indicator of Compromise' (IOC).*
-
-## Lessons Learned
-- Gained hands-on experience with **log ingestion** and parsing.
-- Learned the importance of **Sysmon** for visibility into Windows environments.
-- Developed a workflow for triaging alerts based on severity.
+## Progress Log
+- [ ] Lab Setup v1
+- [ ] AD Hardening
+- [ ] SIEM Deployment
+- [ ] Attack Simulation & IR
+- [ ] Vulnerability Management
+- [ ] Detection Engineering
+- [ ] Cloud Extension
