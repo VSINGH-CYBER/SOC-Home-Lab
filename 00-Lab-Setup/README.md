@@ -47,4 +47,24 @@ Recommended screenshots:
 - Snapshot manager showing baseline snapshots
 
 ## Lessons Learned / Notes
-- 
+- (Place Notes here)
+
+## Network Configuration
+
+### Internal LAN (VMnet1)
+- Subnet: 192.168.100.0/24
+- DHCP: Disabled
+- Purpose: Isolated enterprise lab network
+
+### Planned Static IP Assignments
+| Machine | Role | IP |
+|----------|------|------|
+| DC01 | Domain Controller | 192.168.100.10 |
+| WIN10-01 | Client | 192.168.100.20 |
+| WAZUH-01 | SIEM | 192.168.100.30 |
+| KALI-01 | Attacker | 192.168.100.40 |
+
+### Evidence
+
+![VMnet1 Configuration](screenshots/01_vmnet1_configuration.png)
+
